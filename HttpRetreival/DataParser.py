@@ -39,7 +39,7 @@ class DataParser(HttpSchemaClass):
                         value = cells[len(cells)-1].find(text=True)
                         key = str(key.encode('ascii', 'ignore').decode('ascii'))
                         value = str(value.encode('ascii', 'ignore').decode('ascii'))
-                        self.student[key] = value.lstrip().rstrip()
+                        self.student[key] = int(value.lstrip().rstrip()[:-1])
                 self.tables_result[2] = "SUCCESS"
             except:
                 self.namesError = "Something wrong with mark table parsing for registration Number {}".format(self.reg)
@@ -58,21 +58,7 @@ class DataParser(HttpSchemaClass):
                     extract_marks(marksTable)
                     assert(self.tables_result[2] is not 'FAILURE'), 'Unable to write marks of student to the file'
             self.tables_result[0] = "SUCCESS"
-            return self.tables_result[0]
 
         except urllib2.HTTPError, e:
             print e.fp.read()
 
-# data = DataParser(degree='PU', reg='193158')
-#
-# data.get_data()
-# if data.HttpError is not None:
-#     print data.HttpError
-# else:
-#     print data.response
-#
-# result = data.parse_data()
-# if result == "SUCCESS":
-#     print data.student
-# else:
-#     print "its a failure \n"
