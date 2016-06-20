@@ -1,5 +1,6 @@
 from HttpRetreival import DataParser
 import csv
+import time
 import re
 import string
 
@@ -12,11 +13,11 @@ class CsvFileWriter(object):
                             "PHYSICS", "CHEMISTRY", "MATHEMATICS", "BIOLOGY", "ELECTRONICS",
                             "COMPUTER SCIENCE", "HOME SCIENCE", "GEOLOGY"]
 
-    def get_data_parser(self):
-        data = DataParser.DataParser(degree='PU', reg=193150)
+    def get_data_parser(self, reg_num):
+        data = DataParser.DataParser(degree='PU', reg=reg_num)
         data.get_data()
         data.parse_data()
-        print data.student
+        #print data.student
         self.studentData  = data.student
         #self.field_values.append(data.student)
 
@@ -29,20 +30,23 @@ class CsvFileWriter(object):
 
 
 my_csv = CsvFileWriter()
-my_csv.get_data_parser()
+for register_num in range(193000, 193152):
+    my_csv.get_data_parser(register_num)
 
-for student_keys in my_csv.studentData:
-    my_csv.studentType = "Science"
-    if not (student_keys in my_csv.field_names):
-        my_csv.studentType = "Other"
-        break
-if my_csv.studentType == "Science":
-    for student_keys in my_csv.field_names:
-        if not (student_keys in my_csv.studentData):
-            my_csv.studentData[student_keys] = 0
-    my_csv.field_values.append(my_csv.studentData)
+    for student_keys in my_csv.studentData:
+        my_csv.studentType = "Science"
+        if not (student_keys in my_csv.field_names):
+            my_csv.studentType = "Other"
+            break
+    if my_csv.studentType == "Science":
+        for student_keys in my_csv.field_names:
+            if not (student_keys in my_csv.studentData):
+                my_csv.studentData[student_keys] = 0
+        my_csv.field_values.append(my_csv.studentData)
 
-print my_csv.field_values
+    print my_csv.field_values
+
+    time.sleep(20)
 
 my_csv.collect_data_csv()
 

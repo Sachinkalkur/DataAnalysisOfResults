@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="60c0f904-cbe9-43c9-ad2a-e8a0b9ae92ee" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Studentmarks.csv" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CSVfileWriter.py" afterPath="$PROJECT_DIR$/CSVfileWriter.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HttpRetreival/DataParser.py" afterPath="$PROJECT_DIR$/HttpRetreival/DataParser.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Studentmarks.csv" afterPath="$PROJECT_DIR$/Studentmarks.csv" />
     </list>
     <ignored path="DataAnalysisOfResults.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -38,10 +36,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DataParser.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="DataParser.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/HttpRetreival/DataParser.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
+            <state vertical-scroll-proportion="-0.8690808">
               <caret line="24" column="53" selection-start-line="24" selection-start-column="53" selection-end-line="24" selection-end-column="53" />
               <folding>
                 <element signature="e#0#37#0" expanded="true" />
@@ -50,11 +48,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CSVfileWriter.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CSVfileWriter.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CSVfileWriter.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.3621169">
-              <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
               <folding>
                 <element signature="e#0#36#0" expanded="true" />
               </folding>
@@ -687,22 +685,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HttpRetreival/DataParser.py">
+    <entry file="file://$PROJECT_DIR$/CSVfileWriter.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="24" column="53" selection-start-line="24" selection-start-column="53" selection-end-line="24" selection-end-column="53" />
+          <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
           <folding>
-            <element signature="e#0#37#0" expanded="true" />
+            <element signature="e#0#36#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CSVfileWriter.py">
+    <entry file="file://$PROJECT_DIR$/HttpRetreival/DataParser.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.3621169">
-          <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+        <state vertical-scroll-proportion="-0.8690808">
+          <caret line="24" column="53" selection-start-line="24" selection-start-column="53" selection-end-line="24" selection-end-column="53" />
           <folding>
-            <element signature="e#0#36#0" expanded="true" />
+            <element signature="e#0#37#0" expanded="true" />
           </folding>
         </state>
       </provider>
