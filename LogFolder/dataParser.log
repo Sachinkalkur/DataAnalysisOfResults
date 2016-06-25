@@ -1,0 +1,35 @@
+DEBUG: DataScienceApplication: Logging Has been Initiated
+DEBUG: DataScienceApplication: The student with register number 193000 is a non-science student
+DEBUG: DataScienceApplication: The student with register number 193001 is a non-science student
+DEBUG: DataScienceApplication: The student with register number 193002 is a non-science student
+DEBUG: DataScienceApplication: The student with register number 193003 is a science student
+DEBUG: DataScienceApplication: ================================================================================
+DEBUG: DataScienceApplication: Corresponding data of the student is {'BIOLOGY': 100, 'Name': 'SHAMANTH S', 'GEOLOGY': 0, 'KANNADA': 0, 'MATHEMATICS': 98, 'HOME SCIENCE': 0, 'COMPUTER SCIENCE': 0, 'HINDI': 0, 'ENGLISH': 89, 'SANSKRIT': 98, 'ELECTRONICS': 0, 'CHEMISTRY': 96, 'PHYSICS': 98, 'Reg. No.': '193003'}
+DEBUG: DataScienceApplication: ================================================================================
+DEBUG: DataScienceApplication: The student with register number 193004 is a non-science student
+DEBUG: DataScienceApplication: The student with register number 193005 is a non-science student
+DEBUG: DataScienceApplication: The student with register number 193006 is a non-science student
+DEBUG: DataScienceApplication: The student with register number 193007 is a science student
+DEBUG: DataScienceApplication: ================================================================================
+DEBUG: DataScienceApplication: Corresponding data of the student is {'BIOLOGY': 50, 'Name': 'SHARATH ADIGA P', 'GEOLOGY': 0, 'KANNADA': 0, 'MATHEMATICS': 10, 'HOME SCIENCE': 0, 'COMPUTER SCIENCE': 0, 'HINDI': 0, 'ENGLISH': 73, 'SANSKRIT': 92, 'ELECTRONICS': 0, 'CHEMISTRY': 65, 'PHYSICS': 60, 'Reg. No.': '193007'}
+DEBUG: DataScienceApplication: ================================================================================
+DEBUG: DataScienceApplication: The student with register number 193008 is a non-science student
+DEBUG: DataScienceApplication: The student with register number 193009 is a science student
+DEBUG: DataScienceApplication: ================================================================================
+DEBUG: DataScienceApplication: Corresponding data of the student is {'BIOLOGY': 46, 'Name': 'SHARATH N S', 'GEOLOGY': 0, 'KANNADA': 0, 'MATHEMATICS': 35, 'HOME SCIENCE': 0, 'COMPUTER SCIENCE': 0, 'HINDI': 0, 'ENGLISH': 66, 'SANSKRIT': 87, 'ELECTRONICS': 0, 'CHEMISTRY': 59, 'PHYSICS': 38, 'Reg. No.': '193009'}
+DEBUG: DataScienceApplication: ================================================================================
+DEBUG: DataScienceApplication: The student with register number 193010 is a non-science student
+DEBUG: DataScienceApplication: The student with register number 193011 is a non-science student
+DEBUG: DataScienceApplication: The student with register number 193012 is a non-science student
+DEBUG: DataScienceApplication: The student with register number 193013 is a science student
+DEBUG: DataScienceApplication: ================================================================================
+DEBUG: DataScienceApplication: Corresponding data of the student is {'BIOLOGY': 78, 'Name': 'SHASHANK A N', 'GEOLOGY': 0, 'KANNADA': 0, 'MATHEMATICS': 54, 'HOME SCIENCE': 0, 'COMPUTER SCIENCE': 0, 'HINDI': 0, 'ENGLISH': 64, 'SANSKRIT': 98, 'ELECTRONICS': 0, 'CHEMISTRY': 81, 'PHYSICS': 60, 'Reg. No.': '193013'}
+DEBUG: DataScienceApplication: ================================================================================
+DEBUG: DataScienceApplication: The student with register number 193014 is a non-science student
+DEBUG: DataScienceApplication: The student with register number 193015 is a non-science student
+DEBUG: DataScienceApplication: The student with register number 193016 is a non-science student
+DEBUG: DataScienceApplication: The student with register number 193017 is a non-science student
+DEBUG: DataScienceApplication: The student with register number 193018 is a non-science student
+DEBUG: DataScienceApplication: The student with register number 193019 is a non-science student
+DEBUG: DataScienceApplication: Data Collection is complete and total number of science students is 4
+DEBUG: DataScienceApplication: Data has been written into the CSV file

@@ -1,7 +1,8 @@
 from HttpClass import HttpSchemaClass
 import urllib2
 from bs4 import BeautifulSoup
-import logging
+import time
+
 
 class DataParser(HttpSchemaClass):
     def __init__(self, **kwargs):
@@ -10,15 +11,18 @@ class DataParser(HttpSchemaClass):
         self.student = {}
         self.tables_result = ["FAILURE", "FAILURE", "FAILURE"]
 
-    def get_data(self):
+    def get_data(self, logger):
         request_data = urllib2.Request(self.url, self.postData, self.postHeaders)
         try:
             response_data = urllib2.urlopen(request_data)
             self.response = response_data.read()
         except urllib2.HTTPError, e:
+            logger.error("encountered error while getting result pages")
+            logger.error(e.fp.read())
             self.HttpError = e.fp.read()
+            time.sleep(120)
 
-    def parse_data(self):
+    def parse_data(self, logger):
 
         def extract_names(given_table):
             try:
@@ -45,20 +49,33 @@ class DataParser(HttpSchemaClass):
                 self.namesError = "Something wrong with mark table parsing for registration Number {}".format(self.reg)
 
         try:
-            assert (len(self.response) > 0), 'Empty results page, PU Board might have closed the page'
-            soup_parsed = BeautifulSoup(self.response, 'html.parser')
-            #soup_parsed = BeautifulSoup(open(r"C:\Users\kalkurs\PycharmProjects\untitled1\results.html"), 'html.parser')
-            name_table = soup_parsed.find('table', {'class': "table"})
-            assert (len(name_table) > 0), 'Unknown Entity found without Name'
-            extract_names(name_table)
-            assert(self.tables_result[1] is not 'FAILURE'), 'Unable to write the name to the file'
-            for marksTable in soup_parsed.find('table').parent.find_next_siblings():
-                if len(marksTable) > 0:
-                    assert (len(marksTable) > 0), 'Marks of The student not found'
-                    extract_marks(marksTable)
-                    assert(self.tables_result[2] is not 'FAILURE'), 'Unable to write marks of student to the file'
-            self.tables_result[0] = "SUCCESS"
+            if not len(self.response) > 0:
+                self.namesError = 'Empty results page, PU Board might have closed the page'
+                logger.error(self.namesError)
+            else:
+                soup_parsed = BeautifulSoup(self.response, 'html.parser')
+                name_table = soup_parsed.find('table', {'class': "table"})
+                if not len(name_table) > 0:
+                    logger.error('Unknown Entity found without Name for the student')
+                else:
+                    extract_names(name_table)
+                    if self.tables_result[1] is 'FAILURE':
+                        logger.error('Unable to write the name to the file')
+                        logger.error(self.namesError)
+                    else:
+                        for marksTable in soup_parsed.find('table').parent.find_next_siblings():
+                            if len(marksTable) > 0:
+                                extract_marks(marksTable)
+                                if self.tables_result[2] is 'FAILURE':
+                                    logger.error('Unable to write marks of student to the file')
+                                    logger.error(self.namesError)
+                        if self.tables_result[2] is 'SUCCESS':
+                            self.tables_result[0] = "SUCCESS"
 
-        except urllib2.HTTPError, e:
-            print e.fp.read()
+        except:
+            print("Assertion Error raised and log has been written")
+            pass
 
+if __name__ == '__main':
+    #soup_parsed = BeautifulSoup(open(r"C:\Users\kalkurs\PycharmProjects\untitled1\results.html"), 'html.parser')
+    print "In the main function for testing"
