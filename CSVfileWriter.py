@@ -36,7 +36,7 @@ class CsvFileWriter(object):
 
 
 my_csv = CsvFileWriter()
-for register_num in range(173000, 194000):
+for register_num in range(192000, 194000):
     my_csv.get_data_parser(register_num)
     print "Got data for student with register number {}".format(register_num)
     if my_csv.studentData is not None:
@@ -59,7 +59,7 @@ for register_num in range(173000, 194000):
             my_csv.data_logger.debug("================================================================================")
             my_csv.field_values.append(my_csv.studentData)
 
-        time.sleep(20)
+        time.sleep(5)
 
 my_csv.data_logger.debug("Data Collection is complete and total number of science students is {}"
                          .format(my_csv.field_values.__len__()))
